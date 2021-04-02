@@ -12,5 +12,5 @@ output: html_document
 
 
 - Downloads:
-  - Data: [caschool.xlsx](caschool.xlsx); [birthweight_smoking](birthweight_smoking.xlsx); [Growth.xlsx](Growth.xlsx)
-  - Data Description: [birthweight_smoking_Description](birthweight_smoking_Description.pdf){target=".blank"}; [californiatestscores.docx](californiatestscores.docx) [Growth_Description.pdf](Growth_Description.pdf){target=".blank"}
+  - Data:  [birthweight_smoking](birthweight_smoking.xlsx); [Growth.xlsx](Growth.xlsx)
+  - Data Description: [birthweight_smoking_Description](birthweight_smoking_Description.pdf){target=".blank"};  [Growth_Description.pdf](Growth_Description.pdf){target=".blank"}
