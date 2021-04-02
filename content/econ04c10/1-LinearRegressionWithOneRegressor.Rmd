@@ -1,14 +1,16 @@
 ---
-title: "1. Linear Regression with One Regressor"
+title: "1: Linear Regression with One Regressor"
 author: "pravesh"
 date: "2021-03-31"
 output: html_document
 ---
 
+
 <html>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <object width="100%" height="500" data="LRM.pdf"></object>
 </html>
+
 
 - Downloads:
   - Data: [caschool.xlsx](caschool.xlsx); [Growth.xlsx](Growth.xlsx)
