@@ -1,0 +1,16 @@
+---
+title: "2: Hypothesis Testing"
+author: "pravesh"
+date: "2021-03-30"
+output: html_document
+---
+
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<object width="100%" height="500" data="HypothesisTesting.pdf"></object>
+</html>
+
+
+- Downloads:
+  - Data: [caschool.xlsx](caschool.xlsx); [Earnings_and_Height](Earnings_and_Height.xlsx); [Growth.xlsx](Growth.xlsx)
+  - Data Description: [Earnings_and_Height_Description](Earnings_and_Height_Description.pdf){target=".blank"}; [californiatestscores.docx](californiatestscores.docx) [Growth_Description.pdf](Growth_Description.pdf){target=".blank"}
