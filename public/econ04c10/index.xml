@@ -38,5 +38,14 @@
       <description>Downloads:Data: birthweight_smoking; Growth.xlsxData Description: birthweight_smoking_Description; Growth_Description.pdf</description>
     </item>
     
+    <item>
+      <title>4: Heteroskedasticity</title>
+      <link>/econ04c10/4-heteroskedasticity/</link>
+      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
+      
+      <guid>/econ04c10/4-heteroskedasticity/</guid>
+      <description>Downloads:Data: arrests</description>
+    </item>
+    
   </channel>
 </rss>
