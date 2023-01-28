@@ -10,5 +10,5 @@ editor_options:
 
 ---
 
-### [1. Introducing STATA](content/1.IntroducingSTATA.html)
+### [1. Introducing STATA](content/1.IntroducingSTATA.html){target="_blank"}
 

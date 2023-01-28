@@ -21,8 +21,9 @@ format:
 ---
 
 5. The `use` command<br>
-`use [cps4_small](data/cps4_small.dta)`<br>
-`use cps4_small, clear`
+`use cps4_small`<br>
+`use cps4_small, clear`<br>
+Download the data [cps4_small](data/cps4_small.dta)
 
 6. The variables window
     - The variables in the data file are listed
