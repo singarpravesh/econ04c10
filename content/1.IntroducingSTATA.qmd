@@ -79,14 +79,87 @@ Example:<br>
 `log using lesson1, replace`<br> 
 `log using "lesson1 output", replace`
 
-
-## Using stata graphics
-
-**Histograms**<br>
-`histogram wage`
-
-
   - To close the log file enter <br>
 `log close`
   
-  
+## Using stata graphics
+
+### Histograms<br>
+`histogram wage`<br>
+`histogram wage, percent`<br>
+`histogram wage, percent title(Histogram of wage data)`<br><br>
+`histogram wage, percent title(Histogram of wage data)///`<br>
+`saving(lesson1hist, replace)`<br><br>
+`histogram wage, percent ytitle(Percent) xtitle(wage) ///`<br>
+`title(Histogram of wage data) saving(lesson1hist, replace)`
+
+---
+
+:::{.incremental}
+
+- **Scatter diagrams**<br>
+`twoway (scatter wage educ)`<br>
+`twoway (scatter wage educ), saving(wage_educ, replace)`
+
+- **Using Stata *do* files**
+  - A do file is a method for executing commands
+  - Right click on the **Review** window and click **Select All**, right click again and click **Send to Do File Editor**.
+:::
+
+---
+
+:::{.incremental}
+
+- **Generating new variables**<br>
+`generarte wage2 = wage^2`<br>
+`gen lwage = ln(wage)`
+
+- **Dropping and keeping variables and observations**<br>
+  - Drop variables<br>
+`drop wage2 lwage`<br>
+`drop if wage > 5.50` will drop all observations for which wage is greater than 5.50, or missing.<br>
+` drop if _n > 100` will drop all observations in data rows 100 and above, keeping only the first 100 observations.<br>
+  - Keep variables<br>
+`keep wage2 lwage`
+:::
+
+## Using arithmetic operators
+:::{.incremental}
+- Examples<br>
+`generate wage1 = wage+1` (addition)<br>
+`generate negwage = -wage` (negative or negation)<br>
+`generate blackeduc = black*educ` (multiplication)<br>
+`generate blackeduc_south = black*educ*south` (multiplication)<br>
+`generate blackeduc_west = blackeduc*west` (multiplication with created variable) <br>
+`generate wage_yr = wage/educ` (division)<br>
+`generate blackeduc_midwest = (black*educ)*midwest` (multiplication)
+
+- Several of these constructions were for demonstration purposes only. We’ll drop them using<br>
+`drop blackeduc_west blackeduc_midwest wage1 negwage wage_yr`
+:::
+
+## Using factor/categorical variables
+
+- A categorical variable is the one that defines a group.
+- They are also called **factor, discrete, dummy, binary,** or **indicator** variables.
+- Examples: 
+  - Profession: White collar or blue collar
+  - Race: White, Black, Asian, or African
+  - Gender: Male or Female
+- Indicator variable: is a special category of categorical variable. It has only two categories, e.g. gender (male or female).
+- Another name for indicator variable is a **dummy** variable. The term “dummy” is meant to convey the idea that we are using a numerical value, such as 0 or 1, to represent a qualitative characteristic such as gender.
+
+
+## Using factor/categorical variables
+:::{.incremental}
+- Stata treats categorical variables as factor variables. They are designated in operations with an “i.” prefix, such as `i.female` or `i.black`. 
+- To designate a variable as continuous use the prefix “c.”, as in `c.wage`. Variables such as years of education or experience can be treated as either.
+- Examples:<br>
+`summarize i.female`<br>
+`summarize i.female, allbaselevels` to show the base level <br>
+`summarize ib1.female` to define female = 1 (males) to be the base group <br>
+`summarize ibn.female` to show summary statistics for all levels (no base group is omitted) 
+
+- Factor variables and continuous variables can be interacted with each using the operator “#”<br>
+`summarize c.wage#i.female i.female#i.married`
+:::

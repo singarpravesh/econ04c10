@@ -377,15 +377,75 @@
 <li><p>Log files can be saved in a <strong>text</strong> format or a <strong>smcl</strong> format.</p></li>
 <li><p>To save in text format<br> <code>log using lesson1, replace text</code> will open the log file and replace one by the same name if it exists.<br> <code>log using "lesson1 output", replace text</code> <br> <code>log using lesson1, append</code> will open an existing log file and add new results at the end</p></li>
 <li><p>To save in smcl format<br> <code>log using lesson1, replace</code><br> <code>log using "lesson1 output", replace</code></p></li>
+<li><p>To close the log file enter <br> <code>log close</code></p></li>
 </ul></li>
 </ul>
 </section>
 <section id="using-stata-graphics" class="slide level2">
 <h2>Using stata graphics</h2>
-<p><strong>Histograms</strong><br> <code>histogram wage</code></p>
+<h3 id="histograms">Histograms<br></h3>
+<p><code>histogram wage</code><br> <code>histogram wage, percent</code><br> <code>histogram wage, percent title(Histogram of wage data)</code><br><br> <code>histogram wage, percent title(Histogram of wage data)///</code><br> <code>saving(lesson1hist, replace)</code><br><br> <code>histogram wage, percent ytitle(Percent) xtitle(wage) ///</code><br> <code>title(Histogram of wage data) saving(lesson1hist, replace)</code></p>
+</section>
+<section class="slide level2">
+
+<div>
 <ul>
-<li>To close the log file enter <br> <code>log close</code></li>
+<li class="fragment"><p><strong>Scatter diagrams</strong><br> <code>twoway (scatter wage educ)</code><br> <code>twoway (scatter wage educ), saving(wage_educ, replace)</code></p></li>
+<li class="fragment"><p><strong>Using Stata <em>do</em> files</strong></p>
+<ul>
+<li class="fragment">A do file is a method for executing commands</li>
+<li class="fragment">Right click on the <strong>Review</strong> window and click <strong>Select All</strong>, right click again and click <strong>Send to Do File Editor</strong>.</li>
+</ul></li>
 </ul>
+</div>
+</section>
+<section class="slide level2">
+
+<div>
+<ul>
+<li class="fragment"><p><strong>Generating new variables</strong><br> <code>generarte wage2 = wage^2</code><br> <code>gen lwage = ln(wage)</code></p></li>
+<li class="fragment"><p><strong>Dropping and keeping variables and observations</strong><br></p>
+<ul>
+<li class="fragment">Drop variables<br> <code>drop wage2 lwage</code><br> <code>drop if wage &gt; 5.50</code> will drop all observations for which wage is greater than 5.50, or missing.<br> <code>drop if _n &gt; 100</code> will drop all observations in data rows 100 and above, keeping only the first 100 observations.<br></li>
+<li class="fragment">Keep variables<br> <code>keep wage2 lwage</code></li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="using-arithmetic-operators" class="slide level2">
+<h2>Using arithmetic operators</h2>
+<div>
+<ul>
+<li class="fragment"><p>Examples<br> <code>generate wage1 = wage+1</code> (addition)<br> <code>generate negwage = -wage</code> (negative or negation)<br> <code>generate blackeduc = black*educ</code> (multiplication)<br> <code>generate blackeduc_south = black*educ*south</code> (multiplication)<br> <code>generate blackeduc_west = blackeduc*west</code> (multiplication with created variable) <br> <code>generate wage_yr = wage/educ</code> (division)<br> <code>generate blackeduc_midwest = (black*educ)*midwest</code> (multiplication)</p></li>
+<li class="fragment"><p>Several of these constructions were for demonstration purposes only. We’ll drop them using<br> <code>drop blackeduc_west blackeduc_midwest wage1 negwage wage_yr</code></p></li>
+</ul>
+</div>
+</section>
+<section id="using-factorcategorical-variables" class="slide level2">
+<h2>Using factor/categorical variables</h2>
+<ul>
+<li>A categorical variable is the one that defines a group.</li>
+<li>They are also called <strong>factor, discrete, dummy, binary,</strong> or <strong>indicator</strong> variables.</li>
+<li>Examples:
+<ul>
+<li>Profession: White collar or blue collar</li>
+<li>Race: White, Black, Asian, or African</li>
+<li>Gender: Male or Female</li>
+</ul></li>
+<li>Indicator variable: is a special category of categorical variable. It has only two categories, e.g.&nbsp;gender (male or female).</li>
+<li>Another name for indicator variable is a <strong>dummy</strong> variable. The term “dummy” is meant to convey the idea that we are using a numerical value, such as 0 or 1, to represent a qualitative characteristic such as gender.</li>
+</ul>
+</section>
+<section id="using-factorcategorical-variables-1" class="slide level2">
+<h2>Using factor/categorical variables</h2>
+<div>
+<ul>
+<li class="fragment"><p>Stata treats categorical variables as factor variables. They are designated in operations with an “i.” prefix, such as <code>i.female</code> or <code>i.black</code>.</p></li>
+<li class="fragment"><p>To designate a variable as continuous use the prefix “c.”, as in <code>c.wage</code>. Variables such as years of education or experience can be treated as either.</p></li>
+<li class="fragment"><p>Examples:<br> <code>summarize i.female</code><br> <code>summarize i.female, allbaselevels</code> to show the base level <br> <code>summarize ib1.female</code> to define female = 1 (males) to be the base group <br> <code>summarize ibn.female</code> to show summary statistics for all levels (no base group is omitted)</p></li>
+<li class="fragment"><p>Factor variables and continuous variables can be interacted with each using the operator “#”<br> <code>summarize c.wage#i.female i.female#i.married</code></p></li>
+</ul>
+</div>
 <div class="footer footer-default">
 
 </div>
