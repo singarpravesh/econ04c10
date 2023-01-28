@@ -1,51 +1,0 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Econ04c10s on ECON04C10</title>
-    <link>/econ04c10/</link>
-    <description>Recent content in Econ04c10s on ECON04C10</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Wed, 31 Mar 2021 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="/econ04c10/index.xml" rel="self" type="application/rss+xml" />
-    
-    
-    <item>
-      <title>1: Linear Regression with One Regressor</title>
-      <link>/econ04c10/1-linearregressionwithoneregressor/</link>
-      <pubDate>Wed, 31 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/econ04c10/1-linearregressionwithoneregressor/</guid>
-      <description>Downloads:Data: caschool.xlsx; Growth.xlsxData Description: californiatestscores.docx; Growth_Description.pdf</description>
-    </item>
-    
-    <item>
-      <title>2: Hypothesis Testing</title>
-      <link>/econ04c10/2-hypothesistesting/</link>
-      <pubDate>Tue, 30 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/econ04c10/2-hypothesistesting/</guid>
-      <description>Downloads:Data: caschool.xlsx; Earnings_and_Height; Growth.xlsxData Description: Earnings_and_Height_Description; californiatestscores.docx Growth_Description.pdf</description>
-    </item>
-    
-    <item>
-      <title>3: MLRM and Multicollinearity</title>
-      <link>/econ04c10/3-mlrm-multicollinearity/</link>
-      <pubDate>Mon, 29 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/econ04c10/3-mlrm-multicollinearity/</guid>
-      <description>Downloads:Data: birthweight_smoking; Growth.xlsxData Description: birthweight_smoking_Description; Growth_Description.pdf</description>
-    </item>
-    
-    <item>
-      <title>4: Heteroskedasticity</title>
-      <link>/econ04c10/4-heteroskedasticity/</link>
-      <pubDate>Sun, 28 Mar 2021 00:00:00 +0000</pubDate>
-      
-      <guid>/econ04c10/4-heteroskedasticity/</guid>
-      <description>Downloads:Data: arrests</description>
-    </item>
-    
-  </channel>
-</rss>
