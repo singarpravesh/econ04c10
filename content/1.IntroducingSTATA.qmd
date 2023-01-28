@@ -1,0 +1,91 @@
+---
+title: "Introducing STATA"
+format: 
+  revealjs:
+    smaller: true
+---
+
+## Basics
+1. Starting STATA
+2. The Opening Display
+    - Command - this is where stata commands are typed
+    - Results - output from commands
+    - Review - a listing of commands recently executed
+    - Variables - names of variables in data and labels
+3. Exiting stata - the `exit` command. 
+
+
+4. Changing the working directory <br>
+`cd "C:\data\poe4stata"`
+
+---
+
+5. The `use` command<br>
+`use [cps4_small](data/cps4_small.dta)`<br>
+`use cps4_small, clear`
+
+6. The variables window
+    - The variables in the data file are listed
+    - **Labels, types, and formats** of the variables
+
+7. Labeling variables<br>
+`label variable wage "earnings per hour"`
+
+
+8. Describing data<br>
+`use cps4_small, clear`<br>
+`describe`
+
+9. Summarize the data<br>
+`summarize`
+
+10. The stata help<br>
+`help summarize`<br>
+`findit summarize`
+
+## {.smaller}
+
+11. Stata command syntax<br>
+`command [varlist] [if] [in] [weight] [, options]`<br>
+The terms in brackets [ ] are various optional command components that could be used.
+- [varlist] is the list of variables for which the command is used.
+- [if] is a condition imposed on the command.
+- [in] specifies range of observations for the command.
+- [weight] when some sample observations are to be weighted differently than others.
+- [, options] command options go here.
+
+---
+
+Example:<br>
+`summarize wage, detail`<br>
+`summarize wage if female == 1`<br>
+`summarize wage if exper >= 10`<br>
+`summarize in 1/50` <br>
+`summarize wage in 1/50, detail` <br>
+`summarize wage if female == 1 in 1/750, detail`
+
+---
+
+- Using a log file
+  - All results are written to an output file which Stata calls a **log** file
+  - Log files can be saved in a **text** format or a **smcl** format.
+  - To save in text format<br>
+`log using lesson1, replace text` will open the log file and replace one by the same name if it exists.<br>
+`log using "lesson1 output", replace text` <br>
+`log using lesson1, append` will open an existing log file and add new results at the end
+
+  - To save in smcl format<br>
+`log using lesson1, replace`<br> 
+`log using "lesson1 output", replace`
+
+
+## Using stata graphics
+
+**Histograms**<br>
+`histogram wage`
+
+
+  - To close the log file enter <br>
+`log close`
+  
+  
