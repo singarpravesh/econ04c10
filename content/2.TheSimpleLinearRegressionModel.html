@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="1.IntroducingSTATA_files/libs/clipboard/clipboard.min.js"></script>
-<script src="1.IntroducingSTATA_files/libs/quarto-html/tabby.min.js"></script>
-<script src="1.IntroducingSTATA_files/libs/quarto-html/popper.min.js"></script>
-<script src="1.IntroducingSTATA_files/libs/quarto-html/tippy.umd.min.js"></script>
-<link href="1.IntroducingSTATA_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="1.IntroducingSTATA_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="1.IntroducingSTATA_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<script src="2.TheSimpleLinearRegressionModel_files/libs/clipboard/clipboard.min.js"></script>
+<script src="2.TheSimpleLinearRegressionModel_files/libs/quarto-html/tabby.min.js"></script>
+<script src="2.TheSimpleLinearRegressionModel_files/libs/quarto-html/popper.min.js"></script>
+<script src="2.TheSimpleLinearRegressionModel_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="2.TheSimpleLinearRegressionModel_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="2.TheSimpleLinearRegressionModel_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="2.TheSimpleLinearRegressionModel_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.2.269">
 
-  <title>Introducing STATA</title>
+  <title>The Simple Linear Regression Model</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-  <link rel="stylesheet" href="1.IntroducingSTATA_files/libs/revealjs/dist/reset.css">
-  <link rel="stylesheet" href="1.IntroducingSTATA_files/libs/revealjs/dist/reveal.css">
+  <link rel="stylesheet" href="2.TheSimpleLinearRegressionModel_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="2.TheSimpleLinearRegressionModel_files/libs/revealjs/dist/reveal.css">
   <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
@@ -28,11 +28,11 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="1.IntroducingSTATA_files/libs/revealjs/dist/theme/quarto.css" id="theme">
-  <link href="1.IntroducingSTATA_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-  <link href="1.IntroducingSTATA_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-  <link href="1.IntroducingSTATA_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-  <link href="1.IntroducingSTATA_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <link rel="stylesheet" href="2.TheSimpleLinearRegressionModel_files/libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link href="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
   <style type="text/css">
 
   .callout {
@@ -323,154 +323,23 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Introducing STATA</h1>
+  <h1 class="title">The Simple Linear Regression Model</h1>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="basics" class="slide level2">
-<h2>Basics</h2>
-<ol type="1">
-<li><p>Starting STATA</p></li>
-<li><p>The Opening Display</p>
+<section id="browising-and-listing-data" class="slide level2">
+<h2>Browising and listing data</h2>
 <ul>
-<li>Command - this is where stata commands are typed</li>
-<li>Results - output from commands</li>
-<li>Review - a listing of commands recently executed</li>
-<li>Variables - names of variables in data and labels</li>
-</ul></li>
-<li><p>Exiting stata - the <code>exit</code> command.</p></li>
-<li><p>Changing the working directory <br> <code>cd "C:\data\poe4stata"</code></p></li>
-</ol>
-</section>
-<section class="slide level2">
-
-<ol start="5" type="1">
-<li><p>The <code>use</code> command<br> <code>use cps4_small</code><br> <code>use cps4_small, clear</code><br> Download the data <a href="data/cps4_small.dta">cps4_small</a></p></li>
-<li><p>The variables window</p>
-<ul>
-<li>The variables in the data file are listed</li>
-<li><strong>Labels, types, and formats</strong> of the variables</li>
-</ul></li>
-<li><p>Labeling variables<br> <code>label variable wage "earnings per hour"</code></p></li>
-<li><p>Describing data<br> <code>use cps4_small, clear</code><br> <code>describe</code></p></li>
-<li><p>Summarize the data<br> <code>summarize</code></p></li>
-<li><p>The stata help<br> <code>help summarize</code><br> <code>findit summarize</code></p></li>
-</ol>
-</section>
-<section id="section" class="slide level2 smaller">
-<h2></h2>
-<ol start="11" type="1">
-<li>Stata command syntax<br> <code>command [varlist] [if] [in] [weight] [, options]</code><br> The terms in brackets [ ] are various optional command components that could be used.</li>
-</ol>
-<ul>
-<li>[varlist] is the list of variables for which the command is used.</li>
-<li>[if] is a condition imposed on the command.</li>
-<li>[in] specifies range of observations for the command.</li>
-<li>[weight] when some sample observations are to be weighted differently than others.</li>
-<li>[, options] command options go here.</li>
+<li>Change the working directory</li>
+<li>Use the <strong>food.dta</strong> data</li>
+<li>Download the <a href="data/food.dta">data</a></li>
 </ul>
-</section>
-<section class="slide level2">
-
-<p>Example:<br> <code>summarize wage, detail</code><br> <code>summarize wage if female == 1</code><br> <code>summarize wage if exper &gt;= 10</code><br> <code>summarize in 1/50</code> <br> <code>summarize wage in 1/50, detail</code> <br> <code>summarize wage if female == 1 in 1/750, detail</code></p>
-</section>
-<section class="slide level2">
-
-<ul>
-<li>Using a log file
-<ul>
-<li><p>All results are written to an output file which Stata calls a <strong>log</strong> file</p></li>
-<li><p>Log files can be saved in a <strong>text</strong> format or a <strong>smcl</strong> format.</p></li>
-<li><p>To save in text format<br> <code>log using lesson1, replace text</code> will open the log file and replace one by the same name if it exists.<br> <code>log using "lesson1 output", replace text</code> <br> <code>log using lesson1, append</code> will open an existing log file and add new results at the end</p></li>
-<li><p>To save in smcl format<br> <code>log using lesson1, replace</code><br> <code>log using "lesson1 output", replace</code></p></li>
-<li><p>To close the log file enter <br> <code>log close</code></p></li>
-</ul></li>
-</ul>
-</section>
-<section id="using-stata-graphics" class="slide level2">
-<h2>Using stata graphics</h2>
-<h3 id="histograms">Histograms<br></h3>
-<p><code>histogram wage</code><br> <code>histogram wage, percent</code><br> <code>histogram wage, percent title(Histogram of wage data)</code><br><br> <code>histogram wage, percent title(Histogram of wage data)///</code><br> <code>saving(lesson1hist, replace)</code><br><br> <code>histogram wage, percent ytitle(Percent) xtitle(wage) ///</code><br> <code>title(Histogram of wage data) saving(lesson1hist, replace)</code></p>
-</section>
-<section class="slide level2">
-
 <div>
 <ul>
-<li class="fragment"><p><strong>Scatter diagrams</strong><br> <code>twoway (scatter wage educ)</code><br> <code>twoway (scatter wage educ), saving(wage_educ, replace)</code></p></li>
-<li class="fragment"><p><strong>Using Stata <em>do</em> files</strong></p>
-<ul>
-<li class="fragment">A do file is a method for executing commands</li>
-<li class="fragment">Right click on the <strong>Review</strong> window and click <strong>Select All</strong>, right click again and click <strong>Send to Do File Editor</strong>.</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section class="slide level2">
-
-<div>
-<ul>
-<li class="fragment"><p><strong>Generating new variables</strong><br> <code>generarte wage2 = wage^2</code><br> <code>gen lwage = ln(wage)</code></p></li>
-<li class="fragment"><p><strong>Dropping and keeping variables and observations</strong><br></p>
-<ul>
-<li class="fragment">Drop variables<br> <code>drop wage2 lwage</code><br> <code>drop if wage &gt; 5.50</code> will drop all observations for which wage is greater than 5.50, or missing.<br> <code>drop if _n &gt; 100</code> will drop all observations in data rows 100 and above, keeping only the first 100 observations.<br></li>
-<li class="fragment">Keep variables<br> <code>keep wage2 lwage</code></li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="using-arithmetic-operators" class="slide level2">
-<h2>Using arithmetic operators</h2>
-<div>
-<ul>
-<li class="fragment"><p>Examples<br> <code>generate wage1 = wage+1</code> (addition)<br> <code>generate negwage = -wage</code> (negative or negation)<br> <code>generate blackeduc = black*educ</code> (multiplication)<br> <code>generate blackeduc_south = black*educ*south</code> (multiplication)<br> <code>generate blackeduc_west = blackeduc*west</code> (multiplication with created variable) <br> <code>generate wage_yr = wage/educ</code> (division)<br> <code>generate blackeduc_midwest = (black*educ)*midwest</code> (multiplication)</p></li>
-<li class="fragment"><p>Several of these constructions were for demonstration purposes only. We’ll drop them using<br> <code>drop blackeduc_west blackeduc_midwest wage1 negwage wage_yr</code></p></li>
-</ul>
-</div>
-</section>
-<section id="using-factorcategorical-variables" class="slide level2">
-<h2>Using factor/categorical variables</h2>
-<ul>
-<li>A categorical variable is the one that defines a group.</li>
-<li>They are also called <strong>factor, discrete, dummy, binary,</strong> or <strong>indicator</strong> variables.</li>
-<li>Examples:
-<ul>
-<li>Profession: White collar or blue collar</li>
-<li>Race: White, Black, Asian, or African</li>
-<li>Gender: Male or Female</li>
-</ul></li>
-<li>Indicator variable: is a special category of categorical variable. It has only two categories, e.g.&nbsp;gender (male or female).</li>
-<li>Another name for indicator variable is a <strong>dummy</strong> variable. The term “dummy” is meant to convey the idea that we are using a numerical value, such as 0 or 1, to represent a qualitative characteristic such as gender.</li>
-</ul>
-</section>
-<section id="using-factorcategorical-variables-1" class="slide level2">
-<h2>Using factor/categorical variables</h2>
-<div>
-<ul>
-<li class="fragment"><p>Stata treats categorical variables as factor variables. They are designated in operations with an “i.” prefix, such as <code>i.female</code> or <code>i.black</code>.</p></li>
-<li class="fragment"><p>To designate a variable as continuous use the prefix “c.”, as in <code>c.wage</code>. Variables such as years of education or experience can be treated as either.</p></li>
-<li class="fragment"><p>Examples:<br> <code>summarize i.female</code><br> <code>summarize i.female, allbaselevels</code> to show the base level <br> <code>summarize ib1.female</code> to define female = 1 (males) to be the base group <br> <code>summarize ibn.female</code> to show summary statistics for all levels (no base group is omitted)</p></li>
-<li class="fragment"><p>Factor variables and continuous variables can be interacted with each using the operator “#”<br> <code>summarize c.wage#i.female i.female#i.married</code></p></li>
-</ul>
-</div>
-</section>
-<section id="creating-indicator-variables-using-a-logical-operator" class="slide level2">
-<h2>Creating indicator variables using a logical operator</h2>
-<div>
-<ul>
-<li class="fragment"><p>To create an indicator variable we use the generate command with a condition to be satisfied.</p></li>
-<li class="fragment"><p>If the condition is true, then the variable is assigned the value 1 and if it is not true the variable is assigned the value 0.<br> <code>generate hs = (9 &lt;= educ) &amp; (educ &lt;= 12)</code></p></li>
-<li class="fragment"><p>The missing values can be ignored by <br> <code>generate hs = (9 &lt;= educ) &amp; (educ &lt;= 12) if !missing(educ)</code></p></li>
-</ul>
-</div>
-</section>
-<section id="creating-indicator-variables-using-tabulate" class="slide level2">
-<h2>Creating indicator variables using tabulate</h2>
-<div>
-<ul>
-<li class="fragment">To create a separate indicator variable for each level of a categorical variable, the tabulate command is convenient.</li>
-<li class="fragment">For example, suppose we wanted a separate 0-1 variable for each possible year of education.<br> <code>tabulate educ, gen(ed)</code> <br> The option <strong>gen(ed)</strong> generates a series of 13 indicator variables, <strong>ed1-ed13</strong>, for each possible value of the variable educ.</li>
+<li class="fragment">Read the data<br> <code>use food, clear</code></li>
+<li class="fragment">At the start of each new problem, it is prudent to examine the data.<br> <code>describe</code> <br> <code>list</code></li>
 </ul>
 </div>
 <div class="footer footer-default">
@@ -481,19 +350,19 @@
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>
-  <script src="1.IntroducingSTATA_files/libs/revealjs/dist/reveal.js"></script>
+  <script src="2.TheSimpleLinearRegressionModel_files/libs/revealjs/dist/reveal.js"></script>
   <!-- reveal.js plugins -->
-  <script src="1.IntroducingSTATA_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
-  <script src="1.IntroducingSTATA_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
-  <script src="1.IntroducingSTATA_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
-  <script src="1.IntroducingSTATA_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
-  <script src="1.IntroducingSTATA_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  <script src="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/quarto-support/support.js"></script>
   
 
-  <script src="1.IntroducingSTATA_files/libs/revealjs/plugin/notes/notes.js"></script>
-  <script src="1.IntroducingSTATA_files/libs/revealjs/plugin/search/search.js"></script>
-  <script src="1.IntroducingSTATA_files/libs/revealjs/plugin/zoom/zoom.js"></script>
-  <script src="1.IntroducingSTATA_files/libs/revealjs/plugin/math/math.js"></script>
+  <script src="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="2.TheSimpleLinearRegressionModel_files/libs/revealjs/plugin/math/math.js"></script>
   <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
 
   <script>
