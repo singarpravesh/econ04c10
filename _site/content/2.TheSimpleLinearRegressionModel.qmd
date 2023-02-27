@@ -1,0 +1,22 @@
+---
+title: "The Simple Linear Regression Model"
+format: 
+  revealjs:
+    smaller: true
+    slide-number: c/t
+---
+
+
+## Browising and listing data
+
+- Change the working directory 
+- Use the **food.dta** data
+- Download the [data](data/food.dta)
+
+:::{.incremental}
+- Read the data<br>
+`use food, clear`
+- At the start of each new problem, it is prudent to examine the data.<br>
+`describe` <br>
+`list`
+:::

@@ -3,6 +3,7 @@ title: "Introducing STATA"
 format: 
   revealjs:
     smaller: true
+    slide-number: c/t
 ---
 
 ## Basics
@@ -163,3 +164,27 @@ Example:<br>
 - Factor variables and continuous variables can be interacted with each using the operator “#”<br>
 `summarize c.wage#i.female i.female#i.married`
 :::
+
+## Creating indicator variables using a logical operator
+:::{.incremental}
+- To create an indicator variable we use the generate command with a condition to be satisfied. 
+- If the condition is true, then the variable is assigned the value 1 and if it is not true the variable is assigned the value 0.<br>
+`generate hs = (9 <= educ) & (educ <= 12)`
+
+- The missing values can be ignored by <br>
+`generate hs = (9 <= educ) & (educ <= 12) if !missing(educ)`
+
+:::
+
+## Creating indicator variables using tabulate
+:::{.incremental}
+- To create a separate indicator variable for each level of a categorical variable, the tabulate command is convenient. 
+- For example, suppose we wanted a separate 0-1 variable for each possible year of education.<br>
+`tabulate educ, gen(ed)` <br>
+The option **gen(ed)** generates a series of 13 indicator variables, **ed1-ed13**, for each possible value of the variable educ.
+:::
+
+## Data
+
+- [food](data/food.dta)
+- [growth](data/growth.csv)
