@@ -183,3 +183,8 @@ Example:<br>
 `tabulate educ, gen(ed)` <br>
 The option **gen(ed)** generates a series of 13 indicator variables, **ed1-ed13**, for each possible value of the variable educ.
 :::
+
+## Data
+
+- [food](data/food.dta)
+- [growth](data/growth.csv)
